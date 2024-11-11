@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Sidebar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="left-bar">
+        <button class="toggle-button"></button>
+        <div class="sliding-panel">
+            <nav class="summary">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main>
+        <div class="planet"></div>
+        <button class="satellite1" id="satellite1"></button>
+        <button class="satellite2" id="satellite2"></button>
+        <div class="content-box" id="contentBox">
+            <button class="comeback-btn" id="comebackBtn">Come Back</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
