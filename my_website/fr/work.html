@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="description" name="description" />
+    <meta name="google" content="notranslate" />
+    <meta
+      content="Les modèles Mashup ont été développés par l'équipe Orson.io"
+      name="author"
+    />
+    <style>
+      /* Personnaliser la taille du conteneur PDF */
+      #my-pdf {
+        width: 80%;
+        height: 600px;
+        margin: 10px auto;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <!-- Désactiver la mise en évidence des tap sur IE -->
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/apple-icon-180x180.png"
+    />
+    <link href="../assets/favicon.ico" rel="icon" />
+
+    <title>ATIPE - Projet</title>
+
+    <link href="../main.3f6952e4.css" rel="stylesheet" />
+  </head>
+
+  <body class="">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
+    <!-- Ajouter le contenu de l'en-tête -->
+    <header>
+      <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Basculer la navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="./index.html" title="">01 : Accueil</a></li>
+              <li><a href="./works.html" title="">02 : Mes Projets</a></li>
+              <li><a href="./about.html" title="">03 : À Propos</a></li>
+              <li><a href="./contact.html" title="">04 : Contact</a></li>
+              <li><a href="./components.html" title="">05 : Mon CV</a></li>
+              <li><a href="../work.html" title="">EN</a></li>
+            </ul>
+
+            <ul
+              class="nav navbar-nav navbar-right navbar-small visible-md visible-lg"
+            >
+              <li><a href="./work.html" title="" class="active">001</a></li>
+              <li><a href="./work1.html" title="">002</a></li>
+              <li><a href="./work2.html" title="">003</a></li>
+              <li><a href="./works.html" title="">004</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <img
+              src="../assets/images/work001-01.jpg"
+              class="img-responsive"
+              alt=""
+            />
+            <div class="card-container">
+              <div class="text-center">
+                <h1 class="h2">001 : ATIPE</h1>
+              </div>
+
+              <blockquote>
+                <p>
+                  "Un jeu d'évasion multijoueur dans le monde de l'EPITA LYON."
+                </p>
+                <small class="pull-right">ROGER Robin</small>
+              </blockquote>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 40px">
+            <h2>Vidéo de présentation</h2>
+            <p>\0/</p>
+            <div
+              style="display: inline-block; max-width: 100%; overflow: hidden"
+            >
+              <iframe
+                width="1100"
+                height="600"
+                src="https://www.youtube.com/embed/ThcuLTS9vJY?autoplay=1&mute=1&loop=1"
+                frameborder="0"
+                allowfullscreen
+                style="border: none; display: block; margin: 0 auto"
+              ></iframe>
+            </div>
+          </div>
+          <p>
+            <br />
+            Découvrez ATIPE en action ! <br />
+            Plongez dans le monde immersif d'ATIPE avec cette courte vidéo.
+            <br />
+          </p>
+          <h2>À propos du jeu</h2>
+          <p>
+            ATIPE est un jeu vidéo multijoueur où deux joueurs collaborent pour
+            infiltrer une version virtuelle de l'école EPITA et récupérer les
+            sujets d'examen tout en évitant un gardien de nuit.
+          </p>
+          <b>Caractéristiques principales :</b>
+          <ul>
+            <li>Jeu d'évasion multijoueur.</li>
+            <li>Recréation fidèle en 3D de l'EPITA.</li>
+            <li>
+              Collaboration dynamique entre un infiltré et un guide à distance.
+            </li>
+          </ul>
+          <h2>Instructions du projet :</h2>
+          <div id="my-pdf"></div>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js"></script>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              let container = document.querySelector("#my-pdf");
+              PDFObject.embed(
+                "../assets/doc_projects/atipe/projet_instructions.pdf",
+                container,
+                {
+                  width: "100%",
+                  height: "100%",
+                }
+              );
+            });
+          </script>
+
+          <h2>Ce que j'ai développé</h2>
+          <p>
+            J'ai réalisé la majorité des aspects du projet, ce qui a demandé un
+            effort important, notamment en raison du manque de motivation de mes
+            coéquipiers. J'ai donc mené la plupart du projet de manière
+            autonome, obtenant une excellente note de <b>17/20</b>.
+          </p>
+          <h3>Modélisation 3D</h3>
+          <div class="col-xs-12">
+            <img
+              src="./assets/images/3Dmodeling.png"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+          <p>
+            J'ai utilisé Blender pour modéliser de nombreux éléments, y compris
+            des environnements à grande échelle et des objets détaillés.
+          </p>
+          <ul>
+            <li>Façade EPITA</li>
+            <li>Amphithéâtre</li>
+            <li>Chambre du joueur 2</li>
+            <li>Objets divers : clés, bureaux, serveurs, etc.</li>
+          </ul>
+
+          <h3>Programmation</h3>
+          <p>
+            J'ai conçu les mécaniques de base et les systèmes multijoueurs pour
+            rendre l'expérience immersive.
+          </p>
+          <ul>
+            <li>Moteur de mouvement</li>
+            <li>Systèmes d'inventaire</li>
+            <li>Résolution d'énigmes</li>
+          </ul>
+
+          <p>&nbsp;<u>Systèmes d'énigmes</u> :</p>
+          <p>
+            Conçus et implémentés tous les puzzles (systèmes d'énigmes) du jeu,
+            offrant des défis captivants pour les joueurs.
+          </p>
+
+          <h2>Fonctionnalités dont je suis le plus fier</h2>
+
+          <p>&nbsp;<u>Simulateur d'ordinateur du Joueur 2</u> :</p>
+          <p>
+            Création d'un mini-ordinateur pour le Joueur 2, avec un explorateur
+            de fichiers fonctionnel et un accès aux caméras de sécurité de
+            l'école. Cette fonctionnalité permet au Joueur 2 de guider le Joueur
+            1 à distance, ajoutant un aspect collaboratif au gameplay.
+          </p>
+          <ul>
+            <li>Un explorateur de fichiers entièrement fonctionnel.</li>
+            <li>
+              Un système de caméras permettant d'accéder et de visualiser les
+              flux de sécurité de l'école.
+            </li>
+          </ul>
+
+          <div class="col-xs-12">
+            <img
+              src="../assets/images/computer_sketch.png"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+          <p>.</p>
+          <p>
+            <br />Avant d'implémenter cette fonctionnalité, j'ai réfléchi
+            attentivement à la méthode la plus efficace. Après quelques tests,
+            j'ai conclu que l'utilisation de <b>canvas</b> était l'approche
+            optimale. J'ai conçu un système hiérarchique dans le canvas pour
+            gérer les différents boutons et fichiers. Les boutons pouvaient
+            activer d'autres canvas, créant une structure organisée et dynamique
+            qui reproduisait les fonctionnalités de base d'un ordinateur.<br />
+            Ce système permet au Joueur 2 de naviguer dans une structure de
+            répertoires et d'interagir avec des applications comme les flux des
+            caméras de sécurité, offrant une expérience collaborative et
+            immersive.
+          </p>
+
+          <div style="text-align: center; margin-top: 40px">
+            <div
+              style="display: inline-block; max-width: 100%; overflow: hidden"
+            >
+              <iframe
+                width="1100"
+                height="600"
+                src="https://www.youtube.com/embed/epF_XPSdfY0?autoplay=1&mute=1&loop=1"
+                frameborder="0"
+                allowfullscreen
+                style="border: none; display: block; margin: 0 auto"
+              ></iframe>
+            </div>
+          </div>
+          <p>.</p>
+
+          <p>&nbsp;<b>Fonctionnalité multijoueur</b> :</p>
+          <p>
+            Implémentation de mécaniques multijoueurs robustes permettant à deux
+            joueurs de se connecter et de collaborer de manière fluide dans le
+            jeu. Utilisation de la bibliothèque publique Mirror.
+          </p>
+          <div class="col-xs-12">
+            <img
+              src="../assets/images/multiplayer.png"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+          <p>.</p>
+
+          <td><h2>Rapport du projet</h2></td>
+
+          <div
+            id="pdf-report"
+            style="
+              width: 100%;
+              height: 600px;
+              margin: 20px auto;
+              border: 1px solid #ddd;
+            "
+          ></div>
+
+          <script>
+            PDFObject.embed(
+              "../assets/doc_projects/atipe/rapport_projet.pdf",
+              "#pdf-report"
+            );
+          </script>
+
+          <h2>Consulter le projet sur GitLab</h2>
+          <p>
+            Vous pouvez consulter le code source complet de ce projet sur GitLab
+            :
+          </p>
+          <a href="https://gitlab.com/atipe/ATIPE.git" target="_blank"
+            >Consulter le dépôt GitLab</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-container text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p>
+              © UNTITLED | Site créé avec
+              <a
+                href="http://www.mashup-template.com/"
+                title="Créer un site avec un modèle HTML gratuit"
+                >Mashup Template</a
+              >/<a
+                href="https://www.unsplash.com/"
+                title="Images gratuites magnifiques"
+                >Unsplash</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        navActivePage();
+      });
+    </script>
+
+    <script type="text/javascript" src="../main.70a66962.js"></script>
+  </body>
+</html>

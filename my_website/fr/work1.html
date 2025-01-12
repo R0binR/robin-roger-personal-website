@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="description" name="description" />
+    <meta name="google" content="notranslate" />
+    <meta
+      content="Les modèles Mashup ont été développés par l'équipe Orson.io"
+      name="author"
+    />
+    <style>
+      /* Customize the size of the PDF container */
+      #my-pdf {
+        width: 80%;
+        height: 600px;
+        margin: 10px auto;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/apple-icon-180x180.png"
+    />
+    <link href="../assets/favicon.ico" rel="icon" />
+
+    <title>OCR - Projet</title>
+
+    <link href="../main.3f6952e4.css" rel="stylesheet" />
+  </head>
+
+  <body class="">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
+    <!-- Add your content of header -->
+    <header>
+      <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Basculer la navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="./index.html" title="">01 : Accueil</a></li>
+              <li><a href="./works.html" title="">02 : Mes Projets</a></li>
+              <li><a href="./about.html" title="">03 : À Propos</a></li>
+              <li><a href="./contact.html" title="">04 : Contact</a></li>
+              <li><a href="./components.html" title="">05 : Mon CV</a></li>
+              <li><a href="../work1.html" title="">EN</a></li>
+            </ul>
+
+            <ul
+              class="nav navbar-nav navbar-right navbar-small visible-md visible-lg"
+            >
+              <li><a href="./work.html" title="">001</a></li>
+              <li><a href="./work1.html" title="" class="active">002</a></li>
+              <li><a href="./work2.html" title="">003</a></li>
+              <li><a href="./works.html" title="">004</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <img
+              src="./../assets/images/work001-01.jpg"
+              class="img-responsive"
+              alt=""
+            />
+            <div class="card-container">
+              <div class="text-center">
+                <h1 class="h2">002 : Résolveur OCR de Sudoku</h1>
+              </div>
+
+              <blockquote>
+                <p>
+                  "Exploiter l'OCR et les réseaux neuronaux pour résoudre des
+                  puzzles Sudoku à partir d'images."
+                </p>
+                <small class="pull-right">ROGER Robin</small>
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- <div class="col-md-8 col-md-offset-2 section-container-spacer">
+          <div class="row">
+          <div class="col-xs-12 col-md-6">
+          <img
+          src="./../assets/images/work001-02.jpg"
+          class="img-responsive"
+          alt=""
+          />
+          <p>Skyline de Menphis</p>
+          </div>
+          <div class="col-xs-12 col-md-6">
+          <img
+          src="./../assets/images/work001-03.jpg"
+          class="img-responsive"
+          alt=""
+          />
+          <p>Skyline de Menphis</p>
+          </div>
+          </div>
+          </div> -->
+          <div style="text-align: center; margin-top: 40px">
+            <h2>Vidéo de Présentation</h2>
+            <p>\0/</p>
+            <div
+              style="display: inline-block; max-width: 100%; overflow: hidden"
+            >
+              <iframe
+                width="1100"
+                height="600"
+                src="https://www.youtube.com/embed/3g1IXloGb0c?autoplay=1&mute=1&loop=1"
+                frameborder="0"
+                allowfullscreen
+                style="border: none; display: block; margin: 0 auto"
+              ></iframe>
+            </div>
+          </div>
+
+          <tr>
+            <td><h2>À propos du Projet</h2></td>
+
+            <h4>Résumé :</h4>
+            <p>
+              Le Résolveur OCR de Sudoku est un outil capable de résoudre tout
+              puzzle Sudoku en reconnaissant et traitant une image de la grille.
+              Ce projet m'a permis d'explorer les réseaux neuronaux et de
+              m'initier aux techniques de traitement d'image, y compris
+              l'algorithme de transformée de Hough.
+            </p>
+          </tr>
+          <h4>Objectif :</h4>
+          <p>
+            Le but principal du projet était de développer un système qui
+            reconnaît et résout des puzzles Sudoku à partir d'images.
+          </p>
+          <h4>Voici les instructions du projet :</h4>
+          <div id="my-pdf"></div>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js"></script>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              let container = document.querySelector("#my-pdf");
+              PDFObject.embed(
+                "assets/doc_projects/atipe/ocr_sudoku_solver_instruction.pdf",
+                container,
+                {
+                  width: "100%",
+                  height: "100%",
+                }
+              );
+            });
+          </script>
+
+          <tr>
+            <td><h2>Fonctionnalités</h2></td>
+          </tr>
+
+          <p>&nbsp;<b>Fonctionnalités Principales :</b></p>
+          <ul>
+            <li>OCR pour la détection de grilles Sudoku.</li>
+            <li>Reconnaissance de chiffres basée sur des réseaux neuronaux.</li>
+            <li>Algorithme efficace de résolution de Sudoku.</li>
+            <li>
+              Système interactif d'affichage des résultats et de correction.
+            </li>
+          </ul>
+
+          <tr>
+            <td><h2>Flux de Travail</h2></td>
+          </tr>
+
+          <p>&nbsp;<b>Étapes du Processus :</b></p>
+          <ul>
+            <li>
+              <b>Prétraitement d'Image :</b> Conversion en niveaux de gris,
+              suppression du bruit et correction de rotation.
+            </li>
+            <li>
+              <b>Détection de Grille :</b> Identification et extraction de la
+              grille Sudoku à partir de l'image.
+            </li>
+            <li>
+              <b>Reconnaissance de Chiffres :</b> Classification des chiffres de
+              la grille à l'aide de réseaux neuronaux.
+            </li>
+            <li>
+              <b>Résolution de Sudoku :</b> Algorithme pour compléter la grille.
+            </li>
+            <li>
+              <b>Affichage des Résultats :</b> Superposition de la solution sur
+              l'image d'origine.
+            </li>
+          </ul>
+
+          <tr>
+            <td><h3>Prétraitement d'Image</h3></td>
+          </tr>
+
+          <p>
+            Le prétraitement de l'image est une étape cruciale dans le pipeline
+            de résolution de Sudoku. Son objectif est d'optimiser la qualité de
+            l'image d'entrée en traitant des problèmes comme le bruit, la
+            dominance des couleurs et la rotation pour garantir la précision des
+            étapes suivantes.
+          </p>
+
+          <h4>1. Amélioration du Contraste et Conversion en Niveaux de Gris</h4>
+          <p>
+            Améliorer le contraste en identifiant les couleurs dominantes et en
+            les convertissant en blanc, suivi de la transformation en niveaux de
+            gris. Cette étape améliore la visibilité des détails et prépare
+            l'image pour un traitement ultérieur.
+          </p>
+          <div style="text-align: center">
+            <img
+              src="../assets/images/OCR/image_03.png"
+              alt="Image Originale"
+              width="300"
+              style="margin: 10px"
+            />
+            <img
+              src="../assets/images/OCR/traitement.png"
+              alt="Image Prétraitée"
+              width="300"
+              style="margin: 10px"
+            />
+          </div>
+          <p style="text-align: center">
+            Figure 1 : Avant et Après Prétraitement
+          </p>
+
+          <h4>2. Algorithmes de Conversion en Niveaux de Gris</h4>
+          <p>
+            <b>Algorithmes Considérés :</b>
+          </p>
+          <ul>
+            <li>
+              <b>Moyenne Pondérée (Luminance) :</b> Ajuste la sensibilité de
+              l'œil humain avec la formule :<br />
+              <code>Gray = 0.22 * R + 0.65 * G + 0.11 * B</code>
+            </li>
+            <li>
+              <b>Formule Choisie (Simplifiée) :</b> Pour une efficacité
+              computationnelle :<br />
+              <code>Gray = 0.299 * R + 0.587 * G + 0.114 * B</code>
+            </li>
+            <li>
+              <b>HSL (Teinte-Saturation-Luminance) :</b> Extrait la luminance
+              pour une meilleure cohérence.
+            </li>
+          </ul>
+
+          <div style="text-align: center">
+            <img
+              src="../assets/images/OCR/imageNoral.png"
+              alt="Image Originale"
+              width="300"
+              style="margin: 10px"
+            />
+            <img
+              src="../assets/images/OCR/grayscale.png"
+              alt="Image en Niveaux de Gris"
+              width="300"
+              style="margin: 10px"
+            />
+          </div>
+          <p style="text-align: center">
+            Figure 2 : Conversion en Niveaux de Gris
+          </p>
+
+          <h4>3. Binarisation Adaptive</h4>
+          <p>
+            Convertit l'image en noir et blanc en analysant l'intensité des
+            niveaux de gris et en calculant dynamiquement les seuils en fonction
+            de la distribution des pixels. Les seuils adaptatifs assurent la
+            robustesse contre les conditions d'éclairage variables.
+          </p>
+          <div style="text-align: center">
+            <img
+              src="../assets/images/OCR/image_04.png"
+              alt="Image Originale"
+              width="300"
+              style="margin: 10px"
+            />
+            <img
+              src="../assets/images/OCR/image_04_blackandwhite.png"
+              alt="Image Noir et Blanc"
+              width="300"
+              style="margin: 10px"
+            />
+          </div>
+          <p style="text-align: center">Figure 3 : Binarisation Adaptive</p>
+
+          <h4>4. Correction de Rotation</h4>
+          <p>
+            Détecte et corrige les grilles inclinées pour un alignement précis :
+          </p>
+          <ul>
+            <li>
+              <b>Rotation Manuelle :</b> Utilise des transformations affines
+              pour aligner la grille avec les bords de l'image.
+            </li>
+            <li>
+              <b>Rotation Automatique :</b> Applique la détection des bords
+              (filtre de Canny) et la transformée de Hough pour déterminer
+              l'angle dominant pour un alignement automatique.
+            </li>
+          </ul>
+
+          <div style="text-align: center">
+            <img
+              src="../assets/images/OCR/notRotated.png"
+              alt="Image Non Rotée"
+              width="300"
+              style="margin: 10px"
+            />
+            <img
+              src="../assets/images/OCR/rotated.png"
+              alt="Image Rotée"
+              width="300"
+              style="margin: 10px"
+            />
+          </div>
+          <p style="text-align: center">Figure 4 : Correction de Rotation</p>
+
+          <tr>
+            <td><h3>Détection de Grille</h3></td>
+          </tr>
+
+          <p><b>Vue d’Ensemble :</b></p>
+          <p>
+            La détection de grille implique l'identification et l'extraction de
+            la grille Sudoku à partir d'une image en utilisant la détection de
+            bords, des histogrammes et des techniques de segmentation. Cela
+            garantit une localisation précise de la grille pour les traitements
+            ultérieurs.
+          </p>
+
+          <p>&nbsp;<b>Étapes Clés :</b></p>
+          <ul>
+            <li>
+              <b>Détection de Bords :</b>
+              - Utilisé le filtre de Roberts pour une détection des bords basée
+              sur le gradient, mettant en évidence les gradients horizontaux et
+              verticaux pour identifier les contours de l'image.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/filtre_roberts_01.png"
+                alt="Exemple de Gradient"
+                width="300"
+              />
+              <img
+                src="../assets/images/OCR/filtre_roberts_02.png"
+                alt="Gradients Horizontaux et Verticaux"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 1 : Détection de Bords par Gradient
+            </p>
+
+            <li>
+              <b>Combinaison des Gradients :</b>
+              Combiné les gradients horizontaux (Gh) et verticaux (Gv) pour
+              calculer la force globale du gradient :
+              <code>G(x, y) = √(Gh(x, y)² + Gv(x, y)²)</code>. Le résultat a été
+              seuillé pour créer une image binaire mettant en évidence les
+              contours de la grille.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/filtre_roberts_03.png"
+                alt="Gradient Seuillé"
+                width="300"
+              />
+              <img
+                src="../assets/images/OCR/Countours.png"
+                alt="Contours Mis en Évidence"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 2 : Gradient Combiné et Détection des Contours
+            </p>
+
+            <li>
+              <b>Localisation de la Grille par Histogramme :</b>
+              Utilisé des histogrammes pour compter les pixels noirs le long des
+              lignes et colonnes, identifiant les bords supérieur, inférieur,
+              gauche et droit de la grille.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/image_04_BW.png"
+                alt="Détection de Grille via Histogramme"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 3 : Localisation de la Grille par Histogramme
+            </p>
+
+            <li>
+              <b>Segmentation de la Grille :</b>
+              Redimensionné et normalisé la grille à 900 pixels pour garantir la
+              cohérence. La grille a été divisée en 81 cellules individuelles,
+              enregistrées comme fichiers PNG séparés.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/Resize_res.png"
+                alt="Découpage de la Grille"
+                width="300"
+              />
+              <img
+                src="../assets/images/OCR/cells.png"
+                alt="Cellules"
+                width="300"
+              />
+              <img
+                src="../assets/images/OCR/BW.png"
+                alt="Grille Binaire"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 4 : Grille Découpée et Cellules Individuelles
+            </p>
+          </ul>
+
+          <tr>
+            <td><h3>Reconnaissance de Chiffres</h3></td>
+          </tr>
+
+          <p><b>Vue d’Ensemble :</b></p>
+          <p>
+            Les réseaux neuronaux sont une composante essentielle de ce projet,
+            permettant une reconnaissance précise des chiffres Sudoku. Sans un
+            réseau neuronal correctement configuré, le système échouerait à
+            reconnaître correctement les chiffres de la grille, empêchant la
+            résolution du puzzle.
+          </p>
+
+          <p>&nbsp;<b>Étapes Clés :</b></p>
+          <ul>
+            <li>
+              <b>Implémentation du Réseau Neuronal :</b>
+              Le projet a tiré parti des structures préexistantes en C pour les
+              matrices et les réseaux neuronaux, y compris des opérations comme
+              la multiplication, l'addition et la transposition de matrices.
+              Cela a fourni une base solide pour l'implémentation des
+              algorithmes de propagation avant et rétropropagation.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/struct.png"
+                alt="Structures de Matrices et Réseaux Neuronaux"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 1 : Structures de Matrices et Réseaux Neuronaux
+            </p>
+            <li>
+              <b>Entraînement pour le Problème XOR :</b>
+              L'architecture du réseau XOR se composait de 2 neurones d'entrée,
+              2 neurones dans la couche cachée et 1 neurone de sortie. Cela a
+              aidé l'équipe à comprendre les bases des taux d'apprentissage, de
+              la rétropropagation et du réglage des hyperparamètres.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/réseau_2_2_1.png"
+                alt="Architecture du Réseau Neuronal XOR"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 2 : Architecture du Réseau Neuronal XOR
+            </p>
+
+            <li>
+              <b>Réseau Neuronal pour la Reconnaissance de Chiffres :</b>
+              Le réseau neuronal final a été entraîné pour reconnaître les
+              chiffres (0–9) à l'aide d'un ensemble de données de Kaggle,
+              composé de 6 000 images étiquetées. Chaque image a été prétraitée
+              et convertie en un objet structuré en C pour l'entraînement.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/format_dataset.png"
+                alt="Exemple de Format de Données"
+                width="500"
+              />
+              <img
+                src="../assets/images/OCR/img_struct.png"
+                alt="Structure d'Image en C"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 3 : Format des Données et Structure d'Image
+            </p>
+
+            <li>
+              <b>Performance et Résultats :</b>
+              - Architecture finale : 784 neurones d'entrée, 1 couche cachée
+              avec 200 neurones, et 10 neurones de sortie (un pour chaque
+              chiffre). <br />
+              - Taux d'apprentissage : 0,08. <br />
+              - Fonctions d'activation : Leaky ReLU et dérivée de ReLU. <br />
+              Atteint une précision de 96 % sur l'ensemble d'entraînement et un
+              succès à 100 % sur les images de test Sudoku.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/sudoku_result.png"
+                alt="Résultats de Reconnaissance de Sudoku"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 4 : Résultats de Reconnaissance sur les Images de Test
+              Sudoku
+            </p>
+          </ul>
+
+          <tr>
+            <td><h3>Affichage des Résultats</h3></td>
+          </tr>
+
+          <p><b>Vue d’Ensemble :</b></p>
+          <p>
+            L'affichage des résultats intègre le traitement d'image, la
+            reconnaissance de chiffres basée sur un réseau neuronal, et
+            l'interaction utilisateur pour superposer la solution à l'image
+            Sudoku d'origine. Cette approche robuste garantit la transparence et
+            le contrôle de l'utilisateur tout au long du processus de
+            résolution.
+          </p>
+
+          <p>&nbsp;<b>Étapes Clés :</b></p>
+          <ul>
+            <li>
+              <b>Aperçu de l'Interface :</b>
+              L'interface utilisateur commence par une page d'accueil présentant
+              le projet, suivie d'options pour explorer diverses sections telles
+              que Images, Détails des Tâches et Téléchargement.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/accueil.png"
+                alt="Page d'Accueil"
+                width="500"
+              />
+              <img
+                src="../assets/images/OCR/download.png"
+                alt="Page de Téléchargement"
+                width="500"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 1 : Pages d'Accueil et de Téléchargement
+            </p>
+
+            <li>
+              <b>Interaction avec l'Application :</b>
+              - Les utilisateurs peuvent choisir entre les modes "Résoudre" et
+              "Étape par Étape". <br />
+              - En "Étape par Étape", les utilisateurs voient chaque étape du
+              processus de résolution. <br />
+              - Le mode "Résoudre" offre une fonctionnalité de résolution
+              directe.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/choix.png"
+                alt="Options dans l'Application"
+                width="300"
+              />
+              <img
+                src="../assets/images/OCR/step_by_step.png"
+                alt="Vue Étape par Étape"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 2 : Options d'Application et Vue Étape par Étape
+            </p>
+
+            <li>
+              <b>Sélection et Prétraitement des Images :</b>
+              Les utilisateurs sélectionnent une image Sudoku via un explorateur
+              de fichiers. L'application traite l'image, détecte les contours,
+              segmente les cellules et convertit les chiffres en données
+              exploitables.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/navigateur.png"
+                alt="Explorateur de Fichiers"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 3 : Explorateur de Fichiers pour la Sélection d'Image
+            </p>
+
+            <li>
+              <b>Reconnaissance des Chiffres et Validation Utilisateur :</b>
+              L'image traitée est envoyée au réseau neuronal pour la
+              reconnaissance des chiffres. Les résultats sont affichés avec des
+              niveaux de confiance : <br />
+              - Les chiffres avec une grande confiance apparaissent en vert.
+              <br />
+              - Les chiffres avec une faible confiance apparaissent en rouge,
+              permettant une correction manuelle par l'utilisateur.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/test.png"
+                alt="Reconnaissance et Correction"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 4 : Reconnaissance des Chiffres et Correction
+            </p>
+
+            <li>
+              <b>Solution Finale :</b>
+              Une fois toutes les corrections effectuées, l'application
+              superpose la solution résolue sur l'image Sudoku d'origine,
+              garantissant un résultat précis et esthétiquement agréable.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="../assets/images/OCR/res.png"
+                alt="Sudoku Résolu Final"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">Figure 5 : Sudoku Résolu Final</p>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-container text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p>
+              © UNTITLED | Website created with
+              <a
+                href="http://www.mashup-template.com/"
+                title="Create website with free html template"
+                >Mashup Template</a
+              >/<a
+                href="https://www.unsplash.com/"
+                title="Beautiful Free Images"
+                >Unsplash</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        navActivePage();
+      });
+    </script>
+
+    <script type="text/javascript" src="../main.70a66962.js"></script>
+  </body>
+</html>

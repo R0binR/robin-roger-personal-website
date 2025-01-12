@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="description" name="description" />
+    <meta name="google" content="notranslate" />
+    <meta
+      content="Mashup templates have been developped by Orson.io team"
+      name="author"
+    />
+    <style>
+      /* Customize the size of the PDF container */
+      #my-pdf {
+        width: 80%; /* Set width to 80% of the page */
+        height: 600px; /* Set height to 400px */
+        margin: 10px auto; /* Center the container */
+        border: 1px solid #ddd; /* Optional: Add a border */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for style */
+      }
+    </style>
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-icon-180x180.png"
+    />
+    <link href="./assets/favicon.ico" rel="icon" />
+
+    <title>OCR - Project</title>
+
+    <link href="./main.3f6952e4.css" rel="stylesheet" />
+  </head>
+
+  <body class="">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
+    <!-- Add your content of header -->
+    <header>
+      <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="./index.html" title="">01 : Home</a></li>
+              <li><a href="./works.html" title="">02 : My Projects</a></li>
+              <li><a href="./about.html" title="">03 : About Me</a></li>
+              <li><a href="./contact.html" title="">04 : Contact</a></li>
+              <li><a href="./components.html" title="">05 : My Resume</a></li>
+              <li><a href="./fr/work1.html" title="">FR</a></li>
+            </ul>
+
+            <ul
+              class="nav navbar-nav navbar-right navbar-small visible-md visible-lg"
+            >
+              <li><a href="./work.html" title="">001</a></li>
+              <li><a href="./work1.html" title="" class="active">002</a></li>
+              <li><a href="./work2.html" title="">003</a></li>
+              <li><a href="./works.html" title="">004</a></li>
+              <!-- <li><a href="./index.html" title="">005</a></li>
+              <li><a href="./index.html" title="">006</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <img
+              src="./assets/images/work001-01.jpg"
+              class="img-responsive"
+              alt=""
+            />
+            <div class="card-container">
+              <div class="text-center">
+                <h1 class="h2">002 : OCR Sudoku Solver</h1>
+              </div>
+
+              <blockquote>
+                <p>
+                  "Leveraging OCR and neural networks to solve Sudoku puzzles
+                  from images."
+                </p>
+                <small class="pull-right">ROGER Robin</small>
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- <div class="col-md-8 col-md-offset-2 section-container-spacer">
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
+                <img
+                  src="./assets/images/work001-02.jpg"
+                  class="img-responsive"
+                  alt=""
+                />
+                <p>Menphis skyline</p>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <img
+                  src="./assets/images/work001-03.jpg"
+                  class="img-responsive"
+                  alt=""
+                />
+                <p>Menphis skyline</p>
+              </div>
+            </div>
+          </div> -->
+          <div style="text-align: center; margin-top: 40px">
+            <h2>Presentation Video</h2>
+            <p>\0/</p>
+            <div
+              style="display: inline-block; max-width: 100%; overflow: hidden"
+            >
+              <iframe
+                width="1100"
+                height="600"
+                src="https://www.youtube.com/embed/3g1IXloGb0c?autoplay=1&mute=1&loop=1"
+                frameborder="0"
+                allowfullscreen
+                style="border: none; display: block; margin: 0 auto"
+              ></iframe>
+            </div>
+          </div>
+
+          <tr>
+            <td><h2>About the Project</h2></td>
+
+            <h4>Brief Overview:</h4>
+            <p>
+              The OCR Sudoku Solver is a tool capable of solving any Sudoku
+              puzzle by recognizing and processing an image of the grid. This
+              project allowed me to explore the functionality of neural networks
+              and gain hands-on experience with image processing techniques,
+              including the Hough Transform algorithm.
+            </p>
+          </tr>
+          <h4>Objective:</h4>
+          <p>
+            The main goal of the project was to develop a system that recognizes
+            and solves Sudoku puzzles from images.
+          </p>
+          <h4>Here are the instruction of the project:</h4>
+          <div id="my-pdf"></div>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js"></script>
+
+          <script>
+            // Wait for DOM content to load before embedding the PDF
+            document.addEventListener("DOMContentLoaded", function () {
+              let container = document.querySelector("#my-pdf");
+              PDFObject.embed(
+                "assets/doc_projects/atipe/ocr_sudoku_solver_instruction.pdf",
+                container,
+                {
+                  width: "100%",
+                  height: "100%",
+                }
+              );
+            });
+          </script>
+
+          <tr>
+            <td><h2>Features</h2></td>
+          </tr>
+
+          <p>&nbsp;<b>Core Functionalities:</b></p>
+          <ul>
+            <li>OCR for Sudoku grid detection.</li>
+            <li>Neural network-based digit recognition.</li>
+            <li>Efficient Sudoku-solving algorithm.</li>
+            <li>Interactive result display and correction system.</li>
+          </ul>
+
+          <tr>
+            <td><h2>Workflow</h2></td>
+          </tr>
+
+          <p>&nbsp;<b>Step-by-Step Process:</b></p>
+          <ul>
+            <li>
+              <b>Image Preprocessing:</b> Grayscale conversion, noise removal,
+              and rotation correction.
+            </li>
+            <li>
+              <b>Grid Detection:</b> Identifying and extracting the Sudoku grid
+              from the image.
+            </li>
+            <li>
+              <b>Digit Recognition:</b> Neural network-based classification of
+              grid digits.
+            </li>
+            <li><b>Sudoku Solver:</b> Algorithm to complete the grid.</li>
+            <li>
+              <b>Result Display:</b> Overlaying the solution onto the original
+              image.
+            </li>
+          </ul>
+
+          <tr>
+            <td><h3>Image Preprocessing</h3></td>
+          </tr>
+
+          <p>
+            Image preprocessing is the first crucial step in the Sudoku-solving
+            pipeline. Its purpose is to optimize the input image's quality by
+            addressing issues like noise, color dominance, and rotation to
+            ensure accurate subsequent steps.
+          </p>
+
+          <h4>1. Contrast Enhancement and Grayscale Conversion</h4>
+          <p>
+            Enhance the contrast by identifying dominant colors and converting
+            them to white, followed by grayscale transformation. This step
+            improves detail visibility and prepares the image for further
+            processing.
+          </p>
+          <div style="text-align: center">
+            <img
+              src="assets/images/OCR/image_03.png"
+              alt="Original Image"
+              width="300"
+              style="margin: 10px"
+            />
+            <img
+              src="assets/images/OCR/traitement.png"
+              alt="Preprocessed Image"
+              width="300"
+              style="margin: 10px"
+            />
+          </div>
+          <p style="text-align: center">
+            Figure 1: Before and After Preprocessing
+          </p>
+
+          <h4>2. Grayscale Conversion Algorithms</h4>
+          <p>
+            <b>Algorithms Considered:</b>
+          </p>
+          <ul>
+            <li>
+              <b>Weighted Average (Luminance):</b> Adjusts for human eye
+              sensitivity with the formula:<br />
+              <code>Gray = 0.22 * R + 0.65 * G + 0.11 * B</code>
+            </li>
+            <li>
+              <b>Chosen Formula (Simplified):</b> For computational
+              efficiency:<br />
+              <code>Gray = 0.299 * R + 0.587 * G + 0.114 * B</code>
+            </li>
+            <li>
+              <b>HSL (Hue-Saturation-Luminance):</b> Extracts luminance for
+              improved consistency.
+            </li>
+          </ul>
+
+          <div style="text-align: center">
+            <img
+              src="assets/images/OCR/imageNoral.png"
+              alt="Original Image"
+              width="300"
+              style="margin: 10px"
+            />
+            <img
+              src="assets/images/OCR/grayscale.png"
+              alt="Grayscale Image"
+              width="300"
+              style="margin: 10px"
+            />
+          </div>
+          <p style="text-align: center">Figure 2: Grayscale Conversion</p>
+
+          <h4>3. Adaptive Binarization</h4>
+          <p>
+            Converts the image to black and white by analyzing grayscale
+            intensity and dynamically calculating thresholds based on pixel
+            distribution. Adaptive thresholds ensure robustness against varied
+            lighting conditions.
+          </p>
+          <div style="text-align: center">
+            <img
+              src="assets/images/OCR/image_04.png"
+              alt="Original Image"
+              width="300"
+              style="margin: 10px"
+            />
+            <img
+              src="assets/images/OCR/image_04_blackandwhite.png"
+              alt="Black and White Image"
+              width="300"
+              style="margin: 10px"
+            />
+          </div>
+          <p style="text-align: center">Figure 3: Adaptive Binarization</p>
+
+          <h4>4. Rotation Correction</h4>
+          <p>Detects and corrects skewed grids for accurate grid alignment:</p>
+          <ul>
+            <li>
+              <b>Manual Rotation:</b> Uses affine transformations to align the
+              grid with the image edges.
+            </li>
+            <li>
+              <b>Automatic Rotation:</b> Applies edge detection (Canny filter)
+              and Hough Transform to determine the dominant angle for automatic
+              alignment.
+            </li>
+          </ul>
+
+          <div style="text-align: center">
+            <img
+              src="assets/images/OCR/notRotated.png"
+              alt="Not Rotated Image"
+              width="300"
+              style="margin: 10px"
+            />
+            <img
+              src="assets/images/OCR/rotated.png"
+              alt="Rotated Image"
+              width="300"
+              style="margin: 10px"
+            />
+          </div>
+          <p style="text-align: center">Figure 4: Rotation Correction</p>
+
+          <tr>
+            <td><h3>Grid Detection</h3></td>
+          </tr>
+
+          <p><b>Overview:</b></p>
+          <p>
+            Grid detection involves identifying and extracting the Sudoku grid
+            from an image using edge detection, histograms, and segmentation
+            techniques. This ensures precise localization of the grid for
+            further processing.
+          </p>
+
+          <p>&nbsp;<b>Key Steps:</b></p>
+          <ul>
+            <li>
+              <b>Edge Detection:</b>
+              - Used Roberts filter for gradient-based edge detection,
+              highlighting horizontal and vertical gradients to identify
+              contours in the image.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/filtre_roberts_01.png"
+                alt="Gradient Example"
+                width="300"
+              />
+              <img
+                src="assets/images/OCR/filtre_roberts_02.png"
+                alt="Horizontal and Vertical Gradients"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">Figure 1: Gradient Edge Detection</p>
+
+            <li>
+              <b>Combining Gradients:</b>
+              Combined horizontal (Gh) and vertical (Gv) gradients to compute
+              the overall gradient strength:
+              <code>G(x, y) = √(Gh(x, y)² + Gv(x, y)²)</code>. The result was
+              thresholded to create a binary image highlighting the grid
+              contours.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/filtre_roberts_03.png"
+                alt="Thresholded Gradient"
+                width="300"
+              />
+              <img
+                src="assets/images/OCR/Countours.png"
+                alt="Contours Highlighted"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 2: Combined Gradient and Contour Detection
+            </p>
+
+            <li>
+              <b>Histogram-Based Grid Localization:</b>
+              Used histograms to count black pixels along rows and columns,
+              identifying the grid's top, bottom, left, and right edges.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/image_04_BW.png"
+                alt="Grid Detection via Histogram"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 3: Histogram-Based Grid Localization
+            </p>
+
+            <li>
+              <b>Grid Segmentation:</b>
+              Resized and normalized the grid to 900 pixels for consistency. The
+              grid was divided into 81 individual cells, saved as separate PNG
+              files.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/Resize_res.png"
+                alt="Grid Cropping"
+                width="300"
+              />
+              <img src="assets/images/OCR/cells.png" alt="Cells" width="300" />
+              <img
+                src="assets/images/OCR/BW.png"
+                alt="Binary Grid"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 4: Cropped Grid and Individual Cells
+            </p>
+          </ul>
+
+          <tr>
+            <td><h3>Digit Recognition</h3></td>
+          </tr>
+
+          <p><b>Overview:</b></p>
+          <p>
+            Neural networks are a fundamental component of this project,
+            enabling accurate recognition of Sudoku digits. Without a properly
+            configured neural network, the system would fail to recognize grid
+            digits correctly, preventing successful puzzle-solving.
+          </p>
+
+          <p>&nbsp;<b>Key Steps:</b></p>
+          <ul>
+            <li>
+              <b>Neural Network Implementation:</b>
+              The project leveraged pre-existing C-based structures for matrices
+              and neural networks, including operations like matrix
+              multiplication, addition, and transposition. This provided a solid
+              foundation for implementing feedforward and backpropagation
+              algorithms.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/struct.png"
+                alt="Matrix and Neural Network Structures"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 1: Matrix and Neural Network Structures
+            </p>
+
+            <li>
+              <b>Training for XOR Problem:</b>
+              The XOR network architecture consisted of 2 input neurons, 2
+              hidden layer neurons, and 1 output neuron. This helped the team
+              understand the fundamentals of learning rates, backpropagation,
+              and hyperparameter tuning.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/réseau_2_2_1.png"
+                alt="XOR Neural Network Architecture"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 2: XOR Neural Network Architecture
+            </p>
+
+            <li>
+              <b>Digit Recognition Neural Network:</b>
+              The final neural network was trained to recognize digits (0–9)
+              using a dataset from Kaggle, consisting of 6,000 labeled images.
+              Each image was preprocessed and converted into a C-structured
+              object for training.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/format_dataset.png"
+                alt="Dataset Format Example"
+                width="500"
+              />
+              <img
+                src="assets/images/OCR/img_struct.png"
+                alt="Image Structure in C"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 3: Dataset Format and Image Structure
+            </p>
+
+            <li>
+              <b>Performance and Results:</b>
+              - Final architecture: 784 input neurons, 1 hidden layer with 200
+              neurons, and 10 output neurons (one for each digit). - Learning
+              rate: 0.08. - Activation functions: Leaky ReLU and derivative of
+              ReLU. Achieved 96% accuracy on the training dataset and 100%
+              success on Sudoku test images.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/sudoku_result.png"
+                alt="Sudoku Recognition Results"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 4: Recognition Results on Sudoku Test Images
+            </p>
+          </ul>
+
+          <tr>
+            <td><h3>Result Display</h3></td>
+          </tr>
+
+          <p><b>Overview:</b></p>
+          <p>
+            The result display integrates image processing, neural network-based
+            digit recognition, and user interaction to overlay the solution onto
+            the original Sudoku image. This robust approach ensures transparency
+            and user control throughout the solving process.
+          </p>
+
+          <p>&nbsp;<b>Key Steps:</b></p>
+          <ul>
+            <li>
+              <b>Interface Overview:</b>
+              The user interface begins with a home page presenting the project,
+              followed by options to explore various sections like Images, Task
+              Breakdown, and Download.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/accueil.png"
+                alt="Home Page"
+                width="500"
+              />
+              <img
+                src="assets/images/OCR/download.png"
+                alt="Download Page"
+                width="500"
+              />
+            </div>
+            <p style="text-align: center">Figure 1: Home and Download Pages</p>
+
+            <li>
+              <b>Application Interaction:</b>
+              - Users can choose between "Solve" and "Step by Step" modes. - In
+              "Step by Step," users view each stage of the solving process. -
+              The "Solve" mode provides direct solving functionality.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/choix.png"
+                alt="Options in Application"
+                width="300"
+              />
+              <img
+                src="assets/images/OCR/step_by_step.png"
+                alt="Step by Step View"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 2: Application Options and Step-by-Step View
+            </p>
+
+            <li>
+              <b>Image Selection and Preprocessing:</b>
+              Users select a Sudoku image via a file browser. The application
+              processes the image, detects contours, segments cells, and
+              converts digits into usable data.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/navigateur.png"
+                alt="File Browser"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 3: File Browser for Image Selection
+            </p>
+
+            <li>
+              <b>Digit Recognition and User Validation:</b>
+              The processed image is fed to the neural network for digit
+              recognition. Results are displayed with confidence levels: - High
+              confidence digits appear in green. - Low confidence digits appear
+              in red, allowing manual correction by the user.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/test.png"
+                alt="Recognition and Correction"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">
+              Figure 4: Digit Recognition and Correction
+            </p>
+
+            <li>
+              <b>Final Solution:</b>
+              Once all corrections are made, the application overlays the solved
+              Sudoku onto the original image, ensuring an accurate and visually
+              appealing result.
+            </li>
+            <div style="text-align: center">
+              <img
+                src="assets/images/OCR/res.png"
+                alt="Final Solved Sudoku"
+                width="300"
+              />
+            </div>
+            <p style="text-align: center">Figure 5: Final Solved Sudoku</p>
+          </ul>
+
+          <tr>
+            <td><h3>Key Technologies</h3></td>
+          </tr>
+
+          <p><b>Tools and Technologies Used:</b></p>
+          <ul>
+            <li><b>Programming Language:</b> C</li>
+            <li><b>Libraries:</b> SDL</li>
+            <li>
+              <b>Techniques:</b> Optical Character Recognition (OCR),
+              Convolutional Neural Networks (CNN), Sudoku-solving algorithms
+            </li>
+          </ul>
+
+          <p><b>Highlight Innovation:</b></p>
+          <p>
+            A unique approach in this project was the use of the Hough Transform
+            for grid detection, which enabled precise extraction of the Sudoku
+            grid from images. Additionally, implementing a neural network in C
+            required leveraging efficient data structures and optimizing matrix
+            operations for high performance.
+          </p>
+
+          <tr>
+            <td><h3>Team Contributions</h3></td>
+          </tr>
+
+          <p><b>Team Members:</b></p>
+          <ul>
+            <li><b>TRAHANT Thomas:</b> User interface and application logic</li>
+            <li><b>BALVAY Evarist:</b> Neural network implementation</li>
+            <li><b>MERCIER Eliott:</b> Preprocessing pipeline</li>
+            <li><b>LEMEILLEUR Yako:</b> Neural network optimization</li>
+            <li>
+              <b>ROGER Robin:</b> Grid detection using the Hough Transform
+            </li>
+          </ul>
+
+          <p><b>My Role:</b></p>
+          <p>
+            My primary contribution was developing the grid detection module. By
+            utilizing the Hough Transform algorithm, I ensured precise
+            identification and extraction of the Sudoku grid, which was crucial
+            for subsequent steps in the project.
+          </p>
+
+          <td><h2>Project Report</h2></td>
+
+          <div
+            id="pdf-report"
+            style="
+              width: 100%;
+              height: 600px;
+              margin: 20px auto;
+              border: 1px solid #ddd;
+            "
+          ></div>
+
+          <script>
+            PDFObject.embed("assets/doc_projects/atipe/OCR.pdf", "#pdf-report");
+          </script>
+
+          <h2>Download the Project</h2>
+          <p>
+            You can download the executable for this project by clicking the
+            button below:
+          </p>
+          <p>
+            <a
+              href="assets/downloads/OCR_Sudoku_Solver.zip"
+              class="btn btn-primary btn-lg"
+              download
+              >Download Project</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-container text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p>
+              © UNTITLED | Website created with
+              <a
+                href="http://www.mashup-template.com/"
+                title="Create website with free html template"
+                >Mashup Template</a
+              >/<a
+                href="https://www.unsplash.com/"
+                title="Beautiful Free Images"
+                >Unsplash</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        navActivePage();
+      });
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+-->
+    <script type="text/javascript" src="./main.70a66962.js"></script>
+  </body>
+</html>
